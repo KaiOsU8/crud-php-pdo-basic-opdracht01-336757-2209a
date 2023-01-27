@@ -26,6 +26,11 @@ $sql = "SELECT Id
               ,Tussenvoegsel
               ,Achternaam
               ,Telefoonnummer
+              ,Straatnaam
+              ,Huisnummer
+              ,Woonplaats
+              ,Postcode
+              ,Landnaam
         FROM Persoon";
 
 //Bereid de de query voor met de method prepare
@@ -46,6 +51,11 @@ foreach($result as $info) {
                         <td>$info->Tussenvoegsel</td>
                         <td>$info->Achternaam</td>
                         <td>$info->Telefoonnummer</td>
+                        <td>$info->Straatnaam</td>
+                        <td>$info->Huisnummer</td>
+                        <td>$info->Woonplaats</td>
+                        <td>$info->Postcode</td>
+                        <td>$info->Landnaam</td>
                         <td>
                             <a href='delete.php?Id=$info->Id'>
                                 <img src='img/b_drop.png' alt='cross'>
@@ -72,6 +82,11 @@ foreach($result as $info) {
         <th>Tussenvoegsel</th>
         <th>Achternaam</th>
         <th>Telefoonnummer</th>
+        <th>Straatnaam</th>
+        <th>Huisnummer</th>
+        <th>Woonplaats</th>
+        <th>Postcode</th>
+        <th>Landnaam</th>
         <th></th>
         <th></th>
     </thead>
