@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Gegenereerd op: 24 jan 2023 om 09:48
--- Serverversie: 5.7.31
--- PHP-versie: 8.1.10
+-- Generation Time: Jan 27, 2023 at 11:04 PM
+-- Server version: 5.7.36
+-- PHP Version: 8.1.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,13 +20,11 @@ SET time_zone = "+00:00";
 --
 -- Database: `php-pdo-crud-2209a`
 --
-CREATE DATABASE IF NOT EXISTS `php-pdo-crud-2209a` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `php-pdo-crud-2209a`;
 
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `Persoon`
+-- Table structure for table `Persoon`
 --
 
 DROP TABLE IF EXISTS `Persoon`;
@@ -35,15 +33,21 @@ CREATE TABLE IF NOT EXISTS `Persoon` (
   `Voornaam` varchar(60) NOT NULL,
   `Tussenvoegsel` varchar(10) NOT NULL,
   `Achternaam` varchar(60) NOT NULL,
+  `Telefoonnummer` varchar(20) NOT NULL,
+  `Straatnaam` varchar(50) NOT NULL,
+  `Huisnummer` varchar(10) NOT NULL,
+  `Woonplaats` varchar(50) NOT NULL,
+  `Postcode` varchar(10) NOT NULL,
+  `Landnaam` varchar(30) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
 
 --
--- Gegevens worden geëxporteerd voor tabel `Persoon`
+-- Dumping data for table `Persoon`
 --
 
-INSERT INTO `Persoon` (`Id`, `Voornaam`, `Tussenvoegsel`, `Achternaam`) VALUES
-(13, 'Arjann', 'den', 'Ruijterr');
+INSERT INTO `Persoon` (`Id`, `Voornaam`, `Tussenvoegsel`, `Achternaam`, `Telefoonnummer`, `Straatnaam`, `Huisnummer`, `Woonplaats`, `Postcode`, `Landnaam`) VALUES
+(30, 'koko', 'de', 'kovachev', '4365756', 'santa', '234', 'daar', '2846DH', 'Nederland');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
